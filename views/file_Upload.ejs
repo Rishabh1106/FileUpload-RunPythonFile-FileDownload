@@ -20,30 +20,28 @@
 <body>
 <div class="jumbotron">
 <div class="container">
-  <h2 class="text-center title">Multer File Uploading in nodejs</h2>
+  <h2 class="text-center title">Upload File, Execute Some Python file and Download Output file using Node.js</h2>
+  <div style="margin-left: 35%;margin-top: 80px;">
     <% if(uploadStatus == true){ %>
     <label for="message" class="alert alert-success">Uploaded successfully</label>
     <% } %>
     <div class="row">
-      <div class="col-md-5">
+      <div>
             <form action="/singleFile" enctype="multipart/form-data" method="POST">
-                <h4 >Single Image:</h4>
+                <h4 >Upload input file:</h4>
                 <input type="file"  id="singleImage" name="singleImage" required>
                 <button type="submit" class="btn btn-primary">Upload</button>
             </form>
       </div>
 
-      <div class="col-md-offset-1 col-md-5">
-            <form action="/multipleFile" enctype="multipart/form-data" method="POST">
-                <h4 for="name">Multiple Image:</h4>
-                <input type="file"  id="multipleImage" name="multipleImage" multiple required>
-                <button type="submit" class="btn btn-primary">Upload</button>
-            </form>
-      </div>
+     
   </div>
-  
+
+ 
+<a href="/download" class="btn btn-success" style="margin-top: 40px;margin-left: 10%;">Download the Output</a>
+
   <br/> <br/>
-  
+</div>
   
 </div>
 </div>
